@@ -20,3 +20,28 @@ In the beginning we will use Navigator to navigate between screens, it is also d
 Your first task is to create UI of a login screen. You can find it in Figma project.
 Do not provide any logic for now. Focus on perfect layout, and think if some of created widgets could be reused in the future.
 If you are ready push your changes to the repository. After positive code review you can go to the next part.
+
+
+## Part 2 - Login screen logic
+
+In this part we will try to create simple logic for our login screen.
+First of all, i want you to make text fields work.
+Maybe you can add some validation on email input?
+
+After that, i want you to create an onPressed function for login button.
+It should print values from text field and navigate to the next screen (HomeScreen - create it).
+
+*** As an additional challenge, i want you to take a look on documentation about Flutter Bloc package, and try to implement it in your project.
+You can find documentation here: [Flutter Bloc](https://bloclibrary.dev/#/gettingstarted)
+I've created simple file for you.
+Lets think how you can use it to log in user.
+Try to add three functions to your bloc/cubit:
+- onEmailChanged(email)
+- onPasswordChanged(password)
+- onLoginPressed(email, password)
+
+If it will be to hard, do not spent a lot of time on it. We will talk about it, i will show you how to do it, and implement it in the next part.
+
+If you are ready push your changes to the repository. Lets call after code review to discuss Bloc package, and you will see how we will do it.
+
+
