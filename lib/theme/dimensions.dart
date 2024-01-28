@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Dimensions{
+class Dimensions {
+  static const double paddingXXL = 82;
   static const double paddingXL = 47;
   static const double paddingL = 37;
   static const double paddingML = 26;

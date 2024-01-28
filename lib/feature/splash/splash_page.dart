@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tutorial_project/feature/login/views/login_page.dart';
+import 'package:tutorial_project/feature/register/views/register_page.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({Key? key}) : super(key: key);
@@ -27,6 +27,6 @@ class _SplashPageState extends State<SplashPage> {
   }
 
   void _onGoToAppPressed() {
-    Navigator.of(context).pushReplacement(LoginPage.route());
+    Navigator.of(context).pushReplacement(RegisterPage.route());
   }
 }

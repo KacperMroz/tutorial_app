@@ -8,21 +8,21 @@ class AppTypography {
     height: 32.84 / 28,
   );
 
-  static TextStyle title = const TextStyle(
+  static const TextStyle title = TextStyle(
     // fontFamily: fontFamily,
     fontWeight: FontWeight.w700,
     fontSize: 22,
     height: 25.81 / 22,
   );
 
-  static TextStyle appBarTitle = const TextStyle(
+  static const TextStyle appBarTitle = TextStyle(
     // fontFamily: fontFamily,
     fontWeight: FontWeight.w600,
     fontSize: 20,
     height: 23.48 / 22,
   );
 
-  static TextStyle mediumTitle = const TextStyle(
+  static const TextStyle mediumTitle = TextStyle(
     // fontFamily: fontFamily,
     fontWeight: FontWeight.w700,
     fontSize: 18,
