@@ -49,7 +49,19 @@ class RegisterView extends StatelessWidget {
             floatingLabelBehavior: FloatingLabelBehavior.always,
           )),
           SizedBox(
-            height: 144,
+            height: 37,
+          ),
+          TextField(
+              decoration: InputDecoration(
+            label: Text(
+              "Nickname",
+              style: TextStyle(color: Colors.black),
+            ),
+            border: OutlineInputBorder(borderRadius: BorderRadius.circular(30)),
+            floatingLabelBehavior: FloatingLabelBehavior.always,
+          )),
+          SizedBox(
+            height: 120,
           ),
           TextButton(
               style: TextButton.styleFrom(
