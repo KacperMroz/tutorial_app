@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tutorial_project/theme/app_colors.dart';
 import 'package:tutorial_project/theme/app_typography.dart';
 import 'package:tutorial_project/theme/dimensions.dart';
 
@@ -26,26 +27,56 @@ class RegisterView extends StatelessWidget {
           SizedBox(
             height: 100,
           ),
-          Placeholder(
-            fallbackHeight: 60,
-          ),
+          TextField(
+              decoration: InputDecoration(
+            label: Text(
+              "E-mail",
+              style: TextStyle(color: Colors.black),
+            ),
+            border: OutlineInputBorder(borderRadius: BorderRadius.circular(30)),
+            floatingLabelBehavior: FloatingLabelBehavior.always,
+          )),
           SizedBox(
-            height: Dimensions.paddingL,
+            height: 37,
           ),
-          Placeholder(
-            fallbackHeight: 60,
-          ),
+          TextField(
+              decoration: InputDecoration(
+            label: Text(
+              "Password",
+              style: TextStyle(color: Colors.black),
+            ),
+            border: OutlineInputBorder(borderRadius: BorderRadius.circular(30)),
+            floatingLabelBehavior: FloatingLabelBehavior.always,
+          )),
           SizedBox(
-            height: Dimensions.paddingL,
+            height: 144,
           ),
-          Placeholder(
-            fallbackHeight: 60,
-          ),
+          TextButton(
+              style: TextButton.styleFrom(
+                  padding: EdgeInsets.all(15),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
+                  backgroundColor: AppColors.appButtonColor,
+                  textStyle: TextStyle(
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                  )),
+              onPressed: () {},
+              child: Text(
+                'Sign in',
+                style: TextStyle(color: Colors.white),
+              )),
           SizedBox(
-            height: Dimensions.paddingL,
+            height: 30,
           ),
-          Placeholder(
-            fallbackHeight: 60,
+          Container(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Text('Dont have an account?'),
+                TextButton(onPressed: () {}, child: Text('Create an account'))
+              ],
+            ),
           ),
           SizedBox(
             height: Dimensions.paddingL,

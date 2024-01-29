@@ -17,15 +17,17 @@ class LoginView extends StatelessWidget {
           ),
           Center(
             child: Text(
-              'AppName',
+              'Appka',
               style: AppTypography.largeTitle,
             ),
           ),
           SizedBox(
             height: 150,
           ),
-          Placeholder(
-            fallbackHeight: 60,
+          Container(
+            decoration: BoxDecoration(
+                color: Colors.white, border: Border.all(color: Colors.black)),
+            height: 100,
           ),
           SizedBox(
             height: Dimensions.paddingL,
