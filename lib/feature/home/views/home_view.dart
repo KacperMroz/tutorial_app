@@ -9,7 +9,7 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(25.0),
+      padding: const EdgeInsets.all(25.0),
       child: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -19,50 +19,50 @@ class HomeView extends StatelessWidget {
               style: AppTypography.mediumTitle
                   .copyWith(color: AppColors.appPrimaryColor),
             ),
-            SizedBox(
+            const SizedBox(
               height: Dimensions.paddingML,
             ),
-            GameCard(
+            const GameCard(
               gameName: '123',
               buyIn: '120',
               buyOut: '150',
             ),
-            SizedBox(
+            const SizedBox(
               height: Dimensions.paddingML,
             ),
-            GameCard(
+            const GameCard(
               gameName: '123456',
               buyIn: '150',
               buyOut: '180',
             ),
-            SizedBox(
+            const SizedBox(
               height: Dimensions.paddingML,
             ),
-            GameCard(
+            const GameCard(
               gameName: '123456',
               buyIn: '150',
               buyOut: '180',
             ),
-            SizedBox(
+            const SizedBox(
               height: Dimensions.paddingML,
             ),
-            GameCard(
+            const GameCard(
               gameName: '123456',
               buyIn: '150',
               buyOut: '180',
             ),
-            SizedBox(
+            const SizedBox(
               height: Dimensions.paddingML,
             ),
-            GameCard(
+            const GameCard(
               gameName: '123456',
               buyIn: '150',
               buyOut: '180',
             ),
-            SizedBox(
+            const SizedBox(
               height: Dimensions.paddingML,
             ),
-            GameCard(
+            const GameCard(
               gameName: '123456',
               buyIn: '150',
               buyOut: '180',
@@ -88,32 +88,33 @@ class GameCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.all(Radius.circular(10))),
-        padding: EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
         height: 161,
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Text(gameName),
-          SizedBox(
+          const SizedBox(
             height: 5,
           ),
           Text('Buy in $buyIn'),
-          SizedBox(
+          const SizedBox(
             height: 5,
           ),
           Text('Buy out $buyOut'),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
-          Divider(),
+          const Divider(),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('Created on xxx'),
+              const Text('Created on xxx'),
               Container(
-                padding: EdgeInsets.symmetric(vertical: 5, horizontal: 25),
-                decoration: BoxDecoration(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 5, horizontal: 25),
+                decoration: const BoxDecoration(
                     color: Colors.red,
                     borderRadius: BorderRadius.all(Radius.circular(10))),
                 child: Text(
