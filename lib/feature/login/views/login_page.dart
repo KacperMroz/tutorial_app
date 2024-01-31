@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tutorial_project/app/main_route.dart';
+import 'package:tutorial_project/feature/home/views/home_page.dart';
 import 'package:tutorial_project/feature/login/views/login_view.dart';
 
 class LoginPage extends StatefulWidget {
@@ -14,8 +15,12 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: LoginView(),
+    return Scaffold(
+      body: LoginView(onLoginPressed: _onLoginPressed),
     );
+  }
+
+  void _onLoginPressed() {
+    Navigator.of(context).pushReplacement(HomePage.route());
   }
 }

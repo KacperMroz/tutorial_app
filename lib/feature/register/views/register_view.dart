@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:tutorial_project/theme/app_colors.dart';
 import 'package:tutorial_project/theme/app_typography.dart';
 import 'package:tutorial_project/theme/dimensions.dart';
 
@@ -10,94 +9,37 @@ class RegisterView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(25.0),
+    return const Padding(
+      padding: EdgeInsets.all(25.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          SizedBox(
-            height: Dimensions.paddingXXL,
-          ),
+          SizedBox(height: Dimensions.paddingXXL),
           Center(
             child: Text(
-              'AppName',
+              'Register Page',
               style: AppTypography.largeTitle,
             ),
           ),
           SizedBox(
-            height: 100,
+            height: Dimensions.paddingXL,
           ),
-          TextField(
-              decoration: InputDecoration(
-            label: Text(
-              "E-mail",
-              style: TextStyle(color: Colors.black),
-            ),
-            border: OutlineInputBorder(borderRadius: BorderRadius.circular(30)),
-            floatingLabelBehavior: FloatingLabelBehavior.always,
-          )),
-          SizedBox(
-            height: 37,
-          ),
-          TextField(
-              decoration: InputDecoration(
-            label: Text(
-              "Password",
-              style: TextStyle(color: Colors.black),
-            ),
-            border: OutlineInputBorder(borderRadius: BorderRadius.circular(30)),
-            floatingLabelBehavior: FloatingLabelBehavior.always,
-          )),
-          SizedBox(
-            height: 37,
-          ),
-          TextField(
-              decoration: InputDecoration(
-            label: Text(
-              "Nickname",
-              style: TextStyle(color: Colors.black),
-            ),
-            border: OutlineInputBorder(borderRadius: BorderRadius.circular(30)),
-            floatingLabelBehavior: FloatingLabelBehavior.always,
-          )),
-          SizedBox(
-            height: 120,
-          ),
-          TextButton(
-              style: TextButton.styleFrom(
-                  padding: EdgeInsets.all(15),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10)),
-                  backgroundColor: AppColors.appButtonColor,
-                  textStyle: TextStyle(
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold,
-                  )),
-              onPressed: () {},
-              child: Text(
-                'Sign in',
-                style: TextStyle(color: Colors.white),
-              )),
-          SizedBox(
-            height: 30,
-          ),
-          Container(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Text('Dont have an account?'),
-                TextButton(onPressed: () {}, child: Text('Create an account'))
-              ],
-            ),
-          ),
-          SizedBox(
-            height: Dimensions.paddingL,
-          ),
-          Expanded(child: SizedBox()),
-          ElevatedButton(
-              onPressed: onRegisterPressed, child: Text('Go to register'))
+          Placeholder(
+            fallbackHeight: 30,
+          )
         ],
       ),
     );
   }
 }
+
+//Part 1 - poprawki
+//Przenieść utworzony TextField do osobnego widgetu o nazwie AppTextField
+//Przenieść plik zawierający widget AppTextField do nowego folderu lib/feature/widgets
+//Zmniejszyć odstęp między przyciskiem Sing in a tekstem "Dont have an account?"
+//Usunąć przyciks "Go to register", a jego funkcje podpiąć pod przycisk Sign in
+//Part 2 - nowe
+//Rzeczy z ekranu RegisterView przeniesc na LoginView
+//Na ekranie Register View dodać nowy textfield z polem nickname
+//Na SplashPage zrobić nawigacje do LoginView zamiast RegisterView
+//Pod tekst 'Create an account' dodać nawigacje do RegisterView
