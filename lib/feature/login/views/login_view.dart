@@ -8,10 +8,14 @@ class LoginView extends StatelessWidget {
   const LoginView(
       {super.key,
       required this.onLoginPressed,
-      required this.onRegisterPressed});
+      required this.onRegisterPressed,
+      required this.onNameChanged,
+      required this.onPasswordChanged});
 
   final VoidCallback onRegisterPressed;
   final VoidCallback onLoginPressed;
+  final Function(String) onNameChanged;
+  final Function(String) onPasswordChanged;
 
   @override
   Widget build(BuildContext context) {
@@ -32,17 +36,23 @@ class LoginView extends StatelessWidget {
           const SizedBox(
             height: 100,
           ),
-          const AppTextField(fieldName: 'E-mail'),
+          AppTextField(
+            fieldName: 'E-mail',
+            onChanged: onNameChanged,
+          ),
           const SizedBox(
             height: 37,
           ),
-          const AppTextField(fieldName: 'Password'),
-          const SizedBox(
-            height: 37,
+          AppTextField(
+            fieldName: 'Password',
+            onChanged: onPasswordChanged,
           ),
-          const AppTextField(fieldName: 'Nickname'),
+          // const SizedBox(
+          //   height: 37,
+          // ),
+          // const AppTextField(fieldName: 'Nickname'),
           const SizedBox(
-            height: 120,
+            height: 90,
           ),
           TextButton(
               style: TextButton.styleFrom(

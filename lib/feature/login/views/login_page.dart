@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tutorial_project/app/main_route.dart';
 import 'package:tutorial_project/feature/home/views/home_page.dart';
+import 'package:tutorial_project/feature/login/cubit/login_cubit.dart';
 import 'package:tutorial_project/feature/login/views/login_view.dart';
 import 'package:tutorial_project/feature/register/views/register_page.dart';
 
@@ -18,8 +20,11 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: LoginView(
-          onLoginPressed: _onLoginPressed,
-          onRegisterPressed: _onRegisterPressed),
+        onLoginPressed: _onLoginPressed,
+        onRegisterPressed: _onRegisterPressed,
+        onNameChanged: _onNameChanged,
+        onPasswordChanged: _onPasswordChanged,
+      ),
     );
   }
 
@@ -29,6 +34,14 @@ class _LoginPageState extends State<LoginPage> {
 
   void _onRegisterPressed() {
     Navigator.of(context).pushReplacement(RegisterPage.route());
+  }
+
+  void _onNameChanged(String value) {
+    context.read<LoginCubit>().onNameChanged(value);
+  }
+
+  void _onPasswordChanged(String value) {
+    context.read<LoginCubit>().onPasswordChange(value);
   }
 }
 

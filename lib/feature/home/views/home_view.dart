@@ -4,7 +4,10 @@ import 'package:tutorial_project/theme/app_typography.dart';
 import 'package:tutorial_project/theme/dimensions.dart';
 
 class HomeView extends StatelessWidget {
-  const HomeView({super.key});
+  const HomeView({super.key, required this.name, required this.password});
+
+  final String name;
+  final String password;
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +18,12 @@ class HomeView extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Text(
-              'Events:',
+              'Events for $name:',
+              style: AppTypography.mediumTitle
+                  .copyWith(color: AppColors.appPrimaryColor),
+            ),
+            Text(
+              'Password: $password',
               style: AppTypography.mediumTitle
                   .copyWith(color: AppColors.appPrimaryColor),
             ),

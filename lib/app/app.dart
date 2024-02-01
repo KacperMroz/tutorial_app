@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:tutorial_project/bloc_test/cubit/bloc_test_cubit.dart';
+import 'package:tutorial_project/bloc_test/views/bloc_test_page.dart';
+import 'package:tutorial_project/feature/login/cubit/login_cubit.dart';
 import 'package:tutorial_project/feature/splash/splash_page.dart';
 import 'package:tutorial_project/theme/app_colors.dart';
 
@@ -14,11 +18,17 @@ class TutorialApp extends StatefulWidget {
 class _TutorialAppState extends State<TutorialApp> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      navigatorKey: navigatorKey,
-      title: 'Flutter Tutorial',
-      home: const SplashPage(),
-      theme: customThemeData,
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(create: (context) => BlocTestCubit()),
+        BlocProvider(create: (context) => LoginCubit()),
+      ],
+      child: MaterialApp(
+        navigatorKey: navigatorKey,
+        title: 'Flutter Tutorial',
+        home: const SplashPage(),
+        theme: customThemeData,
+      ),
     );
   }
 
