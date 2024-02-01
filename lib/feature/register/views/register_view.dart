@@ -32,14 +32,3 @@ class RegisterView extends StatelessWidget {
     );
   }
 }
-
-//Part 1 - poprawki
-//Przenieść utworzony TextField do osobnego widgetu o nazwie AppTextField
-//Przenieść plik zawierający widget AppTextField do nowego folderu lib/feature/widgets
-//Zmniejszyć odstęp między przyciskiem Sing in a tekstem "Dont have an account?"
-//Usunąć przyciks "Go to register", a jego funkcje podpiąć pod przycisk Sign in
-//Part 2 - nowe
-//Rzeczy z ekranu RegisterView przeniesc na LoginView
-//Na ekranie Register View dodać nowy textfield z polem nickname
-//Na SplashPage zrobić nawigacje do LoginView zamiast RegisterView
-//Pod tekst 'Create an account' dodać nawigacje do RegisterView
