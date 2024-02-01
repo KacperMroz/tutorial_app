@@ -1,16 +1,22 @@
-# tutorial_project
+# Flutter Tutorial
 
-A new Flutter project.
+In this tutorial i will try to show you how to create a simple flutter app. Tutorial will be divided into several parts. 
+Each part will be in separate branch. Your tasks are named tutorial/part-x. I'll try to attach examples of solutions to each task in branches named solution/part-x.
+
+During the tutorial i will left you TODOs. You can find them in your IDE in TODO tab.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+First of all take a look on a simple Figma project. 
 
-A few resources to get you started if this is your first Flutter project:
+[Figma - link](https://www.figma.com/file/Pepi76GQVyE0BubSH7Cd9y/Untitled?type=design&node-id=0%3A1&mode=design&t=14VWVW28590mSx9G-1)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+I've created for you a simple structure of a project. Get used to it.
+In addition i've created a theme files which i want you to use in this project (lib/theme).
+In the beginning we will use Navigator to navigate between screens, it is also done.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Part 1 - Login screen
+
+Your first task is to create UI of a login screen. You can find it in Figma project.
+Do not provide any logic for now. Focus on perfect layout, and think if some of created widgets could be reused in the future.
+If you are ready push your changes to the repository. After positive code review you can go to the next part.
