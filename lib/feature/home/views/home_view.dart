@@ -127,11 +127,3 @@ class GameCard extends StatelessWidget {
         ]));
   }
 }
-
-//Ustawić wysokość konterenra
-//Dodać padding
-//Dodać główną kolumne z tekstami
-//Na ostatnim miejsu w kolumnie dodać Row
-//Ustawić w nim tekst i ikonke wygrana/przegrana (póki co moze byc puste, albo placeholder)
-//Przy ustawianiu popatrzeć na MainAxisAlignemnt
-//Olać szarą kreske miedzy tekstami

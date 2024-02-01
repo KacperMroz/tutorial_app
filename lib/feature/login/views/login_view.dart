@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:tutorial_project/feature/register/views/register_page.dart';
 import 'package:tutorial_project/feature/widgets/app_text_field.dart';
 import 'package:tutorial_project/theme/app_colors.dart';
 import 'package:tutorial_project/theme/app_typography.dart';
 import 'package:tutorial_project/theme/dimensions.dart';
 
 class LoginView extends StatelessWidget {
-  const LoginView({super.key, required this.onLoginPressed});
+  const LoginView(
+      {super.key,
+      required this.onLoginPressed,
+      required this.onRegisterPressed});
 
+  final VoidCallback onRegisterPressed;
   final VoidCallback onLoginPressed;
 
   @override
@@ -65,12 +68,7 @@ class LoginView extends StatelessWidget {
               children: [
                 const Text('Dont have an account?'),
                 TextButton(
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const RegisterPage()));
-                    },
+                    onPressed: onRegisterPressed,
                     child: const Text('Create an account'))
               ],
             ),
